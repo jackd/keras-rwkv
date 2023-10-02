@@ -7,13 +7,15 @@ _MAJOR_VERSION = "0"
 _MINOR_VERSION = "0"
 _PATCH_VERSION = "1"
 
-with open(os.path.join(os.path.dirname(__file__), "requirements.txt")) as fp:
+with open(
+    os.path.join(os.path.dirname(__file__), "requirements.txt"), "r", encoding="utf8"
+) as fp:
     install_requires = fp.read().split("\n")
 
 setup(
-    name="python_pkg",  # TODO
-    description="python package template",  # TODO
-    url="https://github.com/jackd/python-pkg",  # TODO
+    name="keras-rwkv",
+    description="RWKV language model in keras",
+    url="https://github.com/jackd/keras-rwkv",
     author="Dominic Jack",
     author_email="thedomjack@gmail.com",
     license="Apache 2.0",

@@ -4,8 +4,6 @@ init-hook="from pylint.config import find_pylintrc; import os, sys; sys.path.app
 [MESSAGES CONTROL]
 
 disable=
-    bad-continuation,
-    bad-whitespace,
     invalid-name,
     missing-module-docstring,
     missing-class-docstring,
@@ -16,8 +14,12 @@ disable=
     too-many-instance-attributes,
     too-many-locals,
     invalid-unary-operand-type,
-    not-context-manager
+    not-context-manager,
+    too-many-ancestors,
 
 [format]
 
 max-line-length=88
+
+extension-pkg-whitelist=
+    tensorflow,torch
