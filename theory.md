@@ -53,9 +53,9 @@ The major downside is that computing `exp(kt)` is numerically infeasible for lon
 
 We define an exponentially weighted parameterization of a value $z$ as
 
-$
+$$
 z = \exp(t) v,
-$
+$$
 
 where we assume $t$ and $v$ are both $\mathcal{O}(1)$. Due to the exponential however, the scales of $z$ can vary dramatically. We can add two exponentially weighted values and return the exponentially weighted parameterization without explicitly evaluating either of them,
 

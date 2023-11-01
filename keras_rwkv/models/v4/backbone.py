@@ -82,6 +82,7 @@ class RwkvBackbone(Backbone):  # pylint:disable=abstract-method
         self.ffn_pre = ffn_pre
         self.token_embedding = token_embedding_layer
         self.use_original_cuda_wkv = use_original_cuda_wkv
+        self.parallel_wkv = parallel_wkv
 
     def get_config(self):
         config = super().get_config()
@@ -91,6 +92,7 @@ class RwkvBackbone(Backbone):  # pylint:disable=abstract-method
             hidden_dim=self.hidden_dim,
             ffn_pre=self.ffn_pre,
             use_original_cuda_wkv=self.use_original_cuda_wkv,
+            parallel_wkv=self.parallel_wkv,
         )
         return config
 
